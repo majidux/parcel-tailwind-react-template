@@ -1,3 +1,4 @@
+import React from 'react';
 import { Home } from './pages/Home';
 import { About } from './pages/About';
 import { Router, Link } from '@reach/router';
