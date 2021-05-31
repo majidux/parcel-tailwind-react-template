@@ -3,4 +3,4 @@ dist
 .cache
 .parcel-cache
 yarn.lock
-yarn-error.log
+yarn-error.log*

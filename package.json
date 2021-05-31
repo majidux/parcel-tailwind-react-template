@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "npm run watch:css && parcel serve public/index.html",
+    "dev": "del .parcel-cache && parcel serve public/index.html",
     "build": "parcel build public/index.html",
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch:css": "postcss src/styles/tailwind.css -o src/styles/output.css"
@@ -18,6 +18,9 @@
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/preset-env": "^7.14.4",
+    "@babel/preset-react": "^7.13.13",
     "@types/reach__router": "^1.3.7",
     "@types/react": "^17.0.8",
     "@types/react-dom": "^17.0.5",
@@ -31,8 +34,16 @@
   "engines": {
     "node": "14.17.0"
   },
-  "browserslist": [
-    "> 1%",
-    "not dead"
-  ]
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
